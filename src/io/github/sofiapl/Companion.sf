@@ -1,0 +1,7 @@
+package io.github.sofiapl
+
+open class Companion<out T> {
+
+    val class: Class<out T>
+        native get()
+}

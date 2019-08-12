@@ -1,0 +1,4 @@
+package io.github.sofiapl
+
+class Nothing
+private constructor()

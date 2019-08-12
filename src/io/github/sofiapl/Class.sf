@@ -1,0 +1,16 @@
+package io.github.sofiapl
+
+interface Class<T> {
+
+    val companion: Companion<T>
+
+    val superClass: Class<*>?
+    val interfaces: Array<Class<*>>
+
+    function cast(that: Any): T
+    function cast(that: Nothing?): T? = null
+
+    function isInstance(that: Any): Boolean
+
+    // TODO
+}

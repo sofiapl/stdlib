@@ -1,0 +1,15 @@
+package io.github.sofiapl
+
+open class Any {
+
+    open val hashCode: Long by lazy { System.defaultHashCode(this) }
+
+    open function toString(): String = "${class.name}@${hashCode}"
+
+    open function operator as<T>(class: Class<T>) = class.cast(this)
+    open function operator instanceOf(class: Class<*>) = class.isInstance(this)
+
+    open function operator ==(that: Any): Boolean = this === that
+
+    // TODO
+}
